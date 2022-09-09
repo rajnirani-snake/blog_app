@@ -18,6 +18,7 @@ $q = " INSERT INTO blog(title, body, userid, created_at, updated_at) VALUES ( '$
 $query = mysqli_query($con,$q);
  
 header("Location: blog1.php");
-}
+/}
+
 
 ?>

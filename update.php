@@ -1,3 +1,23 @@
+<?php
+
+ include 'conn.php';
+
+ if(isset($_POST['done'])){
+
+ $id = $_GET['id'];
+ $username = $_POST['title'];
+ $password = $_POST['body'];
+ $updated_at = date('Y-m-d H:i:s');
+
+ 
+ $q = " update blog2 set title='$title', body='$body', updated_at='$updated_at' where id=$id  ";
+ $query = mysqli_query($con,$q);
+
+ header('location:welcome.php');
+ }
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,7 +30,7 @@
 
 </head>
 <body>
-  <?php
+<?php
 include 'conn.php';
 
 $result = mysqli_query($con,"SELECT * FROM blog2" );
@@ -47,11 +67,8 @@ echo '<table border="2" cellspacing="2" cellpadding="2">
           echo "0 results";
         }
 ?>
-    <div class="container-fluid">
-  
-        <p>Welcome user<a href="blog1.php"> Create new blog </a></p>
-     </div>
+    
+     
 
 </body>
 </html>
-

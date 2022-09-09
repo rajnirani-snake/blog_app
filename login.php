@@ -31,8 +31,8 @@ function hello() {
   session_start();
     $message="";
     if(count($_POST)>0) {
-        $con = mysqli_connect('localhost','root','','crudyoutube1') or die('Unable To connect');
-        $result = mysqli_query($con,"SELECT * FROM crudtable1 WHERE username='" . $_POST["username"]. "' and password = '". md5($_POST["password"])."'");
+        $con = mysqli_connect('localhost','root','','demo2') or die('Unable To connect');
+        $result = mysqli_query($con,"SELECT * FROM crudtable3 WHERE username='" . $_POST["username"]. "' and password = '". md5($_POST["password"])."'");
         $row  = mysqli_fetch_array($result);
 
         if(is_array($row)) {

@@ -26,6 +26,7 @@
         
 
         <label>Add Text</label>
+        <!-- <input type="text" name="body" class="form-control"><br> -->
         <textarea name="body" class="form-control"></textarea><br>
         
 
