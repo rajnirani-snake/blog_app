@@ -1,5 +1,5 @@
 
-<?php
+ <?php
 
 include 'conn.php';
 
@@ -10,4 +10,5 @@ $q = " DELETE FROM `blog2` WHERE id = $id ";
 mysqli_query($con, $q);
 
 header('location:welcome.php');
-?>
+
+?> 

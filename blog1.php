@@ -8,9 +8,16 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    
+  <style>
+    h6 {
+  text-align: right;
+}
+  </style>
 </head>
 <body>
+
+
+<p><h6>Go back <a href="welcome.php"><button class="btn btn-success" type="submit" name=""> welcome page </button></a></h6></p>
 
 <div class="container-fluid">
 
@@ -19,7 +26,7 @@
         <br><br><div class="card">
 
         <div class="card-header bg-dark">   
-        <h2 class="text-white text-center">Blog Page</h2></div><br>
+        <h2 class="text-white text-center">Create new blog</h2></div><br>
 
         <label>Title</label>
         <input type="text" name="title" class="form-control"><br>
@@ -27,7 +34,7 @@
 
         <label>Add Text</label>
         <!-- <input type="text" name="body" class="form-control"><br> -->
-        <textarea name="body" class="form-control"></textarea><br>
+        <textarea  type="text" name="body" class="form-control"></textarea><br>
         
 
         <button class="btn btn-success" type="submit" name="done"> Save </button><br>
@@ -35,7 +42,6 @@
         </div>
         </form>
 
-        <p><h3>Go back <a href="welcome.php">welcome page</a></h3></p>
     
     </div>
 

@@ -23,6 +23,25 @@ $id = $_GET['id'];
 
 $result = mysqli_query($con,"SELECT * FROM blog2 WHERE id = $id");
 
+if ($result->num_rows > 0) {
+  while($row = $result->fetch_assoc()) {
+
+    echo "<div><br><br>
+    <div class='container'>
+    <div class='jumbotron'>
+    <h1><center>".$row["title"]."</center></h1>
+    <p><center>Body: ".$row["body"]."</center></p>
+    <p><center>Created_at: ".$row["created_at"]."</center></p>
+    <p><center>Updated_at: ".$row["updated_at"]."</center></p>
+    </div>
+    </div>
+    </div>";
+  }
+
+} else {
+  echo "0 results";
+}
+
 ?>
    
     

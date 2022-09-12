@@ -4,7 +4,6 @@ include 'conn.php';
 
 if(isset($_POST['done'])){
 //print_r($_POST);exit();
-$id = $_GET['id'];
 $title = $_POST['title'];
 $body = $_POST['body'];
 $created_at = date('Y-m-d H:i:s');
