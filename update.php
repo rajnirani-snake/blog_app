@@ -1,25 +1,22 @@
 <?php
 
  include 'conn.php';
-
+ 
  if(isset($_POST['done'])){
 
  $id = $_GET['id'];
- $username = $_POST['title'];
- $password = $_POST['body'];
+ $title = $_POST['title'];
+ $body = $_POST['body'];
  $updated_at = date('Y-m-d H:i:s');
 
  
  $q = "update blog2 set title='$title', body='$body', updated_at='$updated_at' where id=$id ";
  $query = mysqli_query($con,$q);
 
- header('location:welcome.php');
+ header('location:blogs.php');
  }
 
 ?>
-
-
-
 
 <!DOCTYPE html>
 <html>
@@ -33,7 +30,14 @@
     
 </head>
 <body>
-  
+
+<?php
+$postid = intval($_GET['id']);
+$result = mysqli_query($con,"SELECT * FROM blog2 where id=$postid");
+$row = $result->fetch_assoc();
+$title = $row["title"];
+$body = $row["body"];
+?>
 
  <div class="container-fluid">
 
@@ -45,12 +49,12 @@
         <h2 class="text-white text-center">Blog Page</h2></div><br>
 
         <label>Title</label>
-        <input type="text" name="title" class="form-control"><br>
+        <input type="text" name="title" class="form-control"  value="<?php echo $title ?>"><br>
         
 
         <label>Add Text</label>
         <!-- <input type="text" name="body" class="form-control"><br> -->
-        <textarea name="body" class="form-control"></textarea><br>
+        <textarea name="body" class="form-control" row="6"><?php echo $body ?></textarea><br>
         
 
         <button class="btn btn-success" type="submit" name="done"> Save </button><br>

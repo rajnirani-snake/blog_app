@@ -12,14 +12,22 @@
  <link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css">
    <script type="text/javascript" charset="utf8" src="https://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
 
+   <style>
+    h6 {
+  text-align: right;
+}
+  </style>
+
 </head>
 <body>
 
+<p><h6>Go to <a href="blogs.php"><button class="btn btn-info" type="submit" name=""> welcome page </button></a></h6></p>
 
- <?php
+<?php
 include 'conn.php';
 
 $id = $_GET['id'];
+echo $id;
 
 $result = mysqli_query($con,"SELECT * FROM blog2 WHERE id = $id");
 
@@ -33,6 +41,7 @@ if ($result->num_rows > 0) {
     <p><center>Body: ".$row["body"]."</center></p>
     <p><center>Created_at: ".$row["created_at"]."</center></p>
     <p><center>Updated_at: ".$row["updated_at"]."</center></p>
+    <p><center>Created_by: ".$row["created_by"]."</center></p>
     </div>
     </div>
     </div>";

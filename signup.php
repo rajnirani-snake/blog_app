@@ -26,7 +26,7 @@ function hello() {
 
  <div class="col-lg-6 m-auto">
  
- <form name="myForm" action="insert.php" method="post" onsubmit="return hello()">
+ <form name="myForm" action="login_insert.php" method="post" onsubmit="return hello()">
  
  <br><br><div class="card">
  
@@ -44,9 +44,6 @@ function hello() {
 
 <button class="btn btn-success" type="submit" name="done"> Submit </button><br>
 <p>Already have an account? <a href="login.php">Login here</a>.</p> <br>
-
-
-
 
 </div>
  </form>

@@ -12,6 +12,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </head>
 <body>
+
 <script>
 function hello() {
   let username = document.forms["myForm"]["username"].value;
@@ -38,14 +39,12 @@ function hello() {
         if(is_array($row)) {
         $_SESSION["id"] = $row['id'];
         $_SESSION["username"] = $row['username'];
-       // echo $_SESSION["username"];exit();
-        //header("Location:index.php");
     } else {
         $message = "Invalid Username or Password!";
        }
    }
    if(isset($_SESSION["id"])) {
-   header("Location:index.php");
+   header("Location:logout_index.php");
    }
 ?>
 
@@ -72,7 +71,7 @@ function hello() {
 
 
  <button class="btn btn-success" type="submit" name="done"> Submit </button><br>
- <p>Don't have an account? <a href="register.php">Sign up now</a>.</p>
+ <p>Don't have an account? <a href="signup.php">Sign up now</a>.</p>
  
 </div>
  </form>

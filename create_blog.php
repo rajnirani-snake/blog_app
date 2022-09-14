@@ -15,14 +15,36 @@
   </style>
 </head>
 <body>
+<?php 
+    session_start();
 
+    //after insert or update 
+    $_SESSION['status'] = $_SESSION['username'];
+?>
 
-<p><h6>Go back <a href="welcome.php"><button class="btn btn-success" type="submit" name=""> welcome page </button></a></h6></p>
+<p><h6>Go to <a href="blogs.php"><button class="btn btn-info" type="submit" name=""> welcome page </button>
+</a></h6></p>
 
 <div class="container-fluid">
 
-       <form action="insert2.php" method="post">
+    <form action="blog_insert.php" method="post">
+    <?php 
+    
+    
+    if(isset($_SESSION['status']))
+    {
+        ?>
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                <strong> Hey !! </strong> <?= $_SESSION['status']; ?>
+                <!-- <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button> -->
+            </div>
+        <?php 
+        unset($_SESSION['status']);
+    }
+?>
 
+   
         <br><br><div class="card">
 
         <div class="card-header bg-dark">   
@@ -35,15 +57,11 @@
         <label>Add Text</label>
         <!-- <input type="text" name="body" class="form-control"><br> -->
         <textarea  type="text" name="body" class="form-control"></textarea><br>
-        
 
         <button class="btn btn-success" type="submit" name="done"> Save </button><br>
         <button class="btn btn-danger" type="submit" name="cancel"> Cancel </button><br>
+        
         </div>
         </form>
-
-    
-    </div>
-
 </body>
 </html>
