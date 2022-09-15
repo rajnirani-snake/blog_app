@@ -37,17 +37,13 @@ if($_SESSION["username"]) {
 
 <script language="JavaScript" type="text/javascript">
 function checkDelete(){
-    return confirm('Are you sure?');
+    return confirm('Are you sure delete this message');
 }
 </script>
 
 <div class="container-fluid">
  
   <p><h6> Create new blog!! <a href="create_blog.php"><button class="btn btn-info" type="submit" name=""> Blog </button></a></h6></p>
-
-
-  
-  
 
 </div>
   <?php
@@ -57,10 +53,7 @@ $result = mysqli_query($con,"SELECT * FROM blog2" );
 
          if ($result->num_rows > 0) {
           while($row = $result->fetch_assoc()) {
-            // $id = $_row["id"];
-           
-
-
+            //$id = $_row["id"];
             echo'<div> 
             <div class="container">
             <div class="jumbotron">
