@@ -16,7 +16,7 @@
 <body>
 
 
-<p><h6>Go to <a href="blogs.php"><button class="btn btn-info" type="submit" name=""> welcome page </button>
+<p><h6>Go to <a href="blogs.php"><button class="btn btn-info" type="submit" name=""> blogs page </button>
 </a></h6></p>
 
 <div class="container-fluid">

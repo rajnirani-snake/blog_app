@@ -10,7 +10,7 @@
  $updated_at = date('Y-m-d H:i:s');
 
  
- $q = "update blog2 set title='$title', body='$body', updated_at='$updated_at' where id=$id ";
+ $q = "update blog set title='$title', body='$body', updated_at='$updated_at' where id=$id ";
  $query = mysqli_query($con,$q);
 
  header('location:blogs.php');
@@ -33,7 +33,7 @@
 
 <?php
 $postid = intval($_GET['id']);
-$result = mysqli_query($con,"SELECT * FROM blog2 where id=$postid");
+$result = mysqli_query($con,"SELECT * FROM blog where id=$postid");
 $row = $result->fetch_assoc();
 $title = $row["title"];
 $body = $row["body"];

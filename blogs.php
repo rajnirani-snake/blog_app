@@ -48,7 +48,7 @@ function checkDelete(){
 </div>
   <?php
 include 'conn.php';
-$result = mysqli_query($con,"SELECT * FROM blog2" );
+$result = mysqli_query($con,"SELECT * FROM blog" );
 
 
          if ($result->num_rows > 0) {
