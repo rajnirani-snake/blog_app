@@ -1,11 +1,7 @@
   <?php
       include 'header.php';
       session_start();
-
-      include 'conn.php';
-
       if(isset($_POST['done'])){
-
       //print_r($_POST);exit();
       $title = $_POST['title'];
       $body = $_POST['body'];
@@ -43,6 +39,7 @@
         </div>
       </form>
       </div>
+      
   <?php
   include 'footer.php';
   ?>

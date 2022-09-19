@@ -1,7 +1,5 @@
   <?php
   include 'header.php';
-  include 'conn.php';
-
   if(isset($_POST['register'])){
     $username = $_POST['username'];
     $password = md5($_POST['password']);
