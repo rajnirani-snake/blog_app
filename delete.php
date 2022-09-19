@@ -1,14 +1,14 @@
 
- <?php
+    <?php
 
-include 'conn.php';
+    include 'conn.php';
 
-$id = $_GET['id'];
+    $id = $_GET['id'];
 
-$q = " DELETE FROM `blog` WHERE id = $id ";
+    $q = " DELETE FROM `blog` WHERE id = $id ";
 
-mysqli_query($con, $q);
+    mysqli_query($con, $q);
 
-header('location:blogs.php');
+    header('location:blogs.php');
 
-?> 
+    ?> 
